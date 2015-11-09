@@ -1,0 +1,50 @@
+*hicterm.txt*	Highlights terminal color code numbers
+
+Author:		Suraj N. Kurapati <github.com/sunaku>
+License:	Same terms as Vim itself (see |license|)
+Homepage:	https://github.com/sunaku/vim-hicterm
+
+==============================================================================
+INTRODUCTION						*hicterm-help*
+
+This plugin provides Vim commands to highlight terminal color code numbers
+that are used by curses-based applications such as WeeChat, tmux, and Vim.
+It's especially useful when configuring colorschemes for such applications.
+
+If you like this plugin, you might find the following to be useful as well:
+
+|XtermColorTable|	https://github.com/guns/xterm-color-table.vim
+Colorizer		https://github.com/lilydjwg/colorizer
+
+==============================================================================
+COMMANDS						*hicterm-commands*
+
+
+:HiCterm							*:HiCterm*
+		Highlights both foreground and background of terminal color
+		code numbers so that they appear as solid blocks of color.
+
+:HiCtermFg							*:HiCtermFg*
+		Highlights the foreground of terminal color code numbers so
+		that their text appears in their effective terminal colors.
+
+:HiCtermBg							*:HiCtermBg*
+		Highlights the background of terminal color code numbers so
+		that their background shows their effective terminal colors.
+
+:HiCtermOff							*:HiCtermOff*
+		Removes all highlighting of terminal color code numbers.
+
+==============================================================================
+FUNCTIONS						*hicterm-functions*
+
+HiCterm({flag}...)						*HiCterm()*
+		Highlights terminal color code numbers according to {flag}s:
+
+		`"fg"` highlights the foreground (see |highlight-ctermfg|)
+		`"bg"` highlights the background (see |highlight-ctermbg|)
+
+		When no {flag}s are specified, both highlights are removed.
+
+==============================================================================
+ vim:tw=78:ts=8:ft=help:norl:
